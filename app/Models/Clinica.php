@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Clinica extends Model
 {
-    use HasFactory;
+    protected $fillable = ['nombre','slug','idpaciente','especialidad','observaciones'];
+    public function getRouteKeyName()
+    {
+       return 'slug';
+    }
 }
