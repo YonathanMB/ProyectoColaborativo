@@ -17,8 +17,9 @@ class CreateClinicasTable extends Migration
                 $table->id();
                 $table->string('nombre');
                 $table->string('slug');
-                $table->string('telefono');
+                $table->string('idpaciente');
                 $table->string('especialidad');
+                $table->string('observaciones');
                 $table->timestamps();
             });
         }
