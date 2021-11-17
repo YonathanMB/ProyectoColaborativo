@@ -12,12 +12,16 @@ class CreateClinicasTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('clinicas', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+        {
+            Schema::create('clinica', function (Blueprint $table) {
+                $table->id();
+                $table->string('nombre');
+                $table->string('slug');
+                $table->string('apellidos');
+                $table->string('especialidad');
+                $table->timestamps();
+            });
+        }
 
     /**
      * Reverse the migrations.
