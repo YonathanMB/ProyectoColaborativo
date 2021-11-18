@@ -6,7 +6,7 @@ use App\Models\clinica;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class TestController extends Controller
+class ClinicaController extends Controller
 {
     public function crearClinica()
     {
@@ -34,7 +34,7 @@ class TestController extends Controller
         $this->mensaje('message', 'Historial clinico creado correctamente!');
         return redirect()->back();
     }
-    public function listarClinicas()
+    public function listarClinica()
     {
         $clinicas = clinica::toBase()->get();
         return view('clinicaV.index', compact('clinicas'));
