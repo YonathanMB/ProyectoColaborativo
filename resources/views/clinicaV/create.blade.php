@@ -9,6 +9,10 @@
                 <input type="text" name="nombre" value="{{ old('nombre') }}">
             </div>
             <div>
+                <label for="">IDPACIENTE</label>
+                <input type="text" name="paciente" value="{{ old('idPaciente') }}">
+            </div>
+            <div>
                 <label for="">ESPECIALIDAD</label>
                 <input type="text" name="especialidad" value="{{ old('especialidad') }}">
             </div>

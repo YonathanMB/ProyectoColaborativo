@@ -16,6 +16,7 @@ class ClinicaController extends Controller
     {
         $reglas = [
             'nombre' => 'required',
+            'idPaciente' => 'required',
             'especialidad' => 'required',
             'observaciones' => 'required'
             //'email' => 'required|email'
@@ -27,6 +28,7 @@ class ClinicaController extends Controller
         clinica::create([
             'nombre' => $request->nombre,
             'slug' => Str::slug($request->nombre),
+            'idPaciente' => $request->idPaciente,
             'especialidad' => $request->especialidad,
             'observaciones' => $request->observaciones
             //'email' => strtolower($request->email)
@@ -49,6 +51,7 @@ class ClinicaController extends Controller
         echo "FORMULARIO PARA EDITAR HISTORIAL CLINICO";
         $reglas = [
             'nombre' => 'required',
+            'idPaciente' => 'required',
             'especialidad' => 'required',
             'observaciones' => 'required'
         ];
@@ -59,8 +62,9 @@ class ClinicaController extends Controller
         $clinica->update([
 
             'nombre' => $request->nombre,
-            'especialidad' => $request->nombre,
-            'observaciones' => $request->nombre
+            'idPaciente' => $request->idPaciente,
+            'especialidad' => $request->especialidad,
+            'observaciones' => $request->observaciones
             //'email' => strtolower($request->email)
         ]);
         $this->mensaje('message', 'Cliente Actualizado Correctamente!');

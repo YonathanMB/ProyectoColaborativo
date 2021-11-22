@@ -7,6 +7,10 @@
             <input type="text" name="nombre" value="{{ $clinica->nombre }}" readonly>
         </div>
         <div>
+            <label for="">IDPACIENTE</label>
+            <input type="text" name="paciente" value="{{ $clinica->idPaciente }}" readonly>
+        </div>
+        <div>
             <label for="">ESPECIALIDAD</label>
             <input type="text" name="especialidad" value="{{ $clinica->especialidad }}" readonly>
         </div>
